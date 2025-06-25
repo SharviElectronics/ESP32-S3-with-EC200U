@@ -5,9 +5,10 @@
 
 
 void setup() {
+  pinMode(PW_KEY, OUTPUT);
   Serial.begin(115200);              // Monitor
   Serial2.begin(115200, SERIAL_8N1, EC200U_RX, EC200U_TX);  // EC200U UART
-
+  digitalWrite(PW_KEY, LOW);
   delay(3000);
   Serial.println("Initializing EC200U...");
 
